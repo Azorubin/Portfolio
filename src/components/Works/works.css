@@ -29,12 +29,14 @@
     flex-wrap: wrap;
     width: 100vw;
     max-width: 65rem;
+    
 }
 
 .worksImg {
     object-fit: cover;
     height: 20rem;
     margin: 0.5rem;
+   
 }
 
 .workBtn {
@@ -50,4 +52,48 @@
     .worksImg {
         height: 48vw;
     }
+}
+
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    overflow: auto; /* Добавляем прокрутку */
+}
+
+.popupContent {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    border-radius: 20px;
+    text-align: center;
+    margin:10px;
+}
+
+.portfolio-item {
+    position: relative;
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+}
+
+.portfolio-item:hover {
+    transform: scale(1.05); /* Увеличиваем изображение немного */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Добавляем тень для эффекта подсветки */
+}
+
+.portfolio-title {
+    position: absolute;
+    top: 50%; /* Центрируем по вертикали */
+    left: 50%; /* Центрируем по горизонтали */
+    transform: translate(-50%, -50%); /* Выравнивание по центру */
+    color: white; /* Цвет текста заголовка */
+    background-color: rgba(0, 0, 0, 0.5); /* Полупрозрачный фон для текста */
+    padding: 5px 10px; /* Отступы вокруг текста */
+    border-radius: 5px; /* Закругленные углы фона */
 }

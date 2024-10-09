@@ -33,8 +33,8 @@ const Navbar = () => {
             setShowMenu(false)}}>Обо мне</Link>
         <Link activeClass='active' to='works' spy={true} smooth={true} offset={-50} duration={500}  className="listItem" onClick={()=>{
             setShowMenu(false)}}>Портфолио</Link>
-        <Link activeClass='active' to='clients' spy={true} smooth={true} offset={-50} duration={500}  className="listItem" onClick={()=>{
-            setShowMenu(false)}}>Клиенты</Link>
+        <Link activeClass='active' to='steck' spy={true} smooth={true} offset={-50} duration={500}  className="listItem" onClick={()=>{
+            setShowMenu(false)}}>Технологии</Link>
         <Link activeClass='active' to='contact' spy={true} smooth={true} offset={-50} duration={500}  className="listItem" onClick={()=>{
             setShowMenu()}}>Контакты</Link>
         </div>
