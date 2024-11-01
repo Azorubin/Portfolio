@@ -1,99 +1,15 @@
-#works {
-    margin: 0 auto;
-    min-height: calc(100vh - 4rem);
-    width: 100vw;
-    max-width: 60rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 0 1rem;
-}
-
-.worksTitle {
-    margin: 1rem 0;
-    font-size: 3rem;
-}
-
-.worksDesc {
-    font-weight: 300;
-    font-size: 1rem;
-    max-width: 45rem;
-}
-
-.worksImgs {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    width: 100vw;
-    max-width: 65rem;
-    
-}
-
-.worksImg {
-    object-fit: cover;
-    height: 20rem;
-    margin: 0.5rem;
-   
-}
-
-.workBtn {
-    margin: 3rem 0;
-    padding: 0.5rem 2.5rem;
-    border: none;
-    border-radius: 2rem;
-    background: white;
-    font-size: 1rem;
-}
-
-@media screen and (max-width:585px) {
-    .worksImg {
-        height: 48vw;
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
     }
 }
 
-.popup {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.7);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1000;
-    overflow: auto; /* Добавляем прокрутку */
-}
-
-.popupContent {
-    background-color: rgba(0, 0, 0, 0.7);
-    padding: 20px;
-    border-radius: 20px;
-    text-align: center;
-    margin:10px;
-}
-
-.portfolio-item {
-    position: relative;
-    transition: transform 0.3s, box-shadow 0.3s;
-    cursor: pointer;
-}
-
-.portfolio-item:hover {
-    transform: scale(1.05); /* Увеличиваем изображение немного */
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Добавляем тень для эффекта подсветки */
-}
-
-.portfolio-title {
-    position: absolute;
-    top: 50%; /* Центрируем по вертикали */
-    left: 50%; /* Центрируем по горизонтали */
-    transform: translate(-50%, -50%); /* Выравнивание по центру */
-    color: white; /* Цвет текста заголовка */
-    background-color: rgba(0, 0, 0, 0.5); /* Полупрозрачный фон для текста */
-    padding: 5px 10px; /* Отступы вокруг текста */
-    border-radius: 5px; /* Закругленные углы фона */
+.pulse-animation {
+    animation: pulse 1.5s infinite;
 }
