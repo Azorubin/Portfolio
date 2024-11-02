@@ -54,19 +54,22 @@ export const Works = () => {
             </div>
 
             {isPopupOpen && selectedProject && (
-                <div className="fixed top-0 left-0 right-0 bottom-0 bg-black bg-opacity-70 flex justify-center items-center z-50">
-                    <div className="bg-black bg-opacity-70 p-6 rounded-lg text-center m-4">
-                        <h2 className="text-3xl mb-4">{selectedProject.title}</h2>
-                        {selectedProject.component}
-                        <h3 className="text-lg mt-4">Технологии:</h3>
-                        <ul className="list-disc list-inside mb-4">
-                            {selectedProject.technologies.map((tech, index) => (
-                                <li key={index}>{tech}</li>
-                            ))}
-                        </ul>
-                        <button onClick={handleClosePopup} className="bg-white rounded-full my-4 py-3 px-8 text-black">Закрыть</button>
-                    </div>
-                </div>
+               <div className="fixed inset-0 bg-black bg-opacity-70 flex justify-center items-center z-50">
+               <div className="bg-black bg-opacity-70 p-6 rounded-lg text-center m-4 max-w-full sm:max-w-3xl">
+                   <h2 className="text-3xl mb-4">{selectedProject.title}</h2>
+                   {selectedProject.component}
+                   <h3 className="text-lg mt-4">Технологии:</h3>
+                   <ul className="list-disc list-inside mb-4">
+                       {selectedProject.technologies.map((tech, index) => (
+                           <li key={index}>{tech}</li>
+                       ))}
+                   </ul>
+                   <button onClick={handleClosePopup} className="bg-white rounded-full my-4 py-3 px-8 text-black">Закрыть</button>
+               </div>
+           </div>
+           
+           
+           
             )}
 
             <div className="mt-8">
