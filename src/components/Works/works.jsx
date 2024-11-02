@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState } from 'react';
 import { FaGithub } from 'react-icons/fa'; // Импорт иконки GitHub
 import Portfolio1 from '../../assets/portfolioWeather.PNG';
@@ -55,19 +54,22 @@ export const Works = () => {
             </div>
 
             {isPopupOpen && selectedProject && (
-                <div className="fixed top-0 left-0 right-0 bottom-0 bg-black bg-opacity-70 flex justify-center items-center z-50">
-                    <div className="bg-black bg-opacity-70 p-6 rounded-lg text-center m-4">
-                        <h2 className="text-3xl mb-4">{selectedProject.title}</h2>
-                        {selectedProject.component}
-                        <h3 className="text-lg mt-4">Технологии:</h3>
-                        <ul className="list-disc list-inside mb-4">
-                            {selectedProject.technologies.map((tech, index) => (
-                                <li key={index}>{tech}</li>
-                            ))}
-                        </ul>
-                        <button onClick={handleClosePopup} className="bg-white rounded-full my-4 py-3 px-8 text-black">Закрыть</button>
-                    </div>
-                </div>
+               <div className="fixed inset-0 bg-black bg-opacity-70 flex justify-center items-center z-50">
+               <div className="bg-black bg-opacity-70 p-6 rounded-lg text-center m-4 max-w-full sm:max-w-3xl">
+                   <h2 className="text-3xl mb-4">{selectedProject.title}</h2>
+                   {selectedProject.component}
+                   <h3 className="text-lg mt-4">Технологии:</h3>
+                   <ul className="list-disc list-inside mb-4">
+                       {selectedProject.technologies.map((tech, index) => (
+                           <li key={index}>{tech}</li>
+                       ))}
+                   </ul>
+                   <button onClick={handleClosePopup} className="bg-white rounded-full my-4 py-3 px-8 text-black">Закрыть</button>
+               </div>
+           </div>
+           
+           
+           
             )}
 
             <div className="mt-8">
@@ -98,31 +100,3 @@ export const Works = () => {
         </section>
     );
 };
-=======
-import React from 'react'
-import './works.css'
-import Portfolio1 from '../../assets/portfolio-1.png'
-import Portfolio2 from '../../assets/portfolio-2.png'
-import Portfolio3 from '../../assets/portfolio-3.png'
-import Portfolio4 from '../../assets/portfolio-4.png'
-import Portfolio5 from '../../assets/portfolio-5.png'
-import Portfolio6 from '../../assets/portfolio-6.png'
-
-export const Works = () => {
-  return (
-    <section id='works'>
-        <h2 className="worksTitle">Портфолио</h2>
-        <span className="worksDesc">Я придаю большое значение мелочам и тщательно работаю над проектами, уделяя внимание каждой детали.</span>
-        <div className="worksImgs">
-            <img src={Portfolio1} alt="" className="worksImg" />
-            <img src={Portfolio2}  alt="" className="worksImg" />
-            <img src={Portfolio3}  alt="" className="worksImg" />
-            <img src={Portfolio4}  alt="" className="worksImg" />
-            <img src={Portfolio5}  alt="" className="worksImg" />
-            <img src={Portfolio6}  alt="" className="worksImg" />
-        </div>
-        <button className="workBtn">Узнать больше</button>
-    </section>
-  )
-}
->>>>>>> a3f109759cf48dc0d17f6cbba84e7eba50afaa56

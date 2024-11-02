@@ -2,16 +2,20 @@
     place-self: center;
     padding: 40px;
     border-radius: 10px;
-    background-image: linear-gradient(45deg, #2f4680,#500ae4);
+    background-image: linear-gradient(45deg, #2f4680, #500ae4);
     display: flex;
     flex-direction: column;
     align-items: center;
+    max-width: 600px; /* Ограничиваем максимальную ширину */
+    width: 90%; /* Устанавливаем ширину для адаптивности */
+    margin: 20px auto;
 }
 
 .search-bar {
     display: flex;
     align-items: center;
     gap: 12px;
+    width: 100%; /* Подстраиваем ширину */
 }
 
 .search-bar input {
@@ -23,7 +27,9 @@
     color: #626262;
     background: #ebfffc;
     font-size: 18px;
+    width: 100%; /* Расширяем на полную ширину контейнера */
 }
+
 .search-bar img {
     width: 50px;
     padding: 15px;
@@ -33,8 +39,8 @@
 }
 
 .weather-icon {
-    width: 150px;
-    margin: 30px 0;
+    width: 75px;
+    margin: 10px 0;
 }
 
 .temperature {
@@ -46,6 +52,7 @@
 .location {
     color: #fff;
     font-size: 40px;
+    text-align: center; /* Центрируем текст */
 }
 
 .weather-data {
@@ -54,6 +61,8 @@
     color: #fff;
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap; /* Подстраиваемся под меньшие экраны */
+    gap: 20px; /* Добавляем отступы между колонками */
 }
 
 .weather-data .col {
@@ -61,6 +70,7 @@
     align-items: flex-start;
     gap: 12px;
     font-size: 22px;
+    flex: 1 1 100px; /* Адаптируем колонки под разные экраны */
 }
 
 .weather-data .col span {
@@ -71,4 +81,45 @@
 .weather-data .col img {
     width: 26px;
     margin-top: 10px;
+}
+
+/* Средние экраны (планшеты) */
+@media (max-width: 768px) {
+    .temperature {
+        font-size: 60px;
+    }
+    .location {
+        font-size: 32px;
+    }
+    .search-bar input {
+        font-size: 16px;
+    }
+    .weather-data .col {
+        font-size: 18px;
+    }
+}
+
+/* Маленькие экраны (мобильные устройства) */
+@media (max-width: 480px) {
+    .weather {
+        padding: 20px;
+    }
+    .temperature {
+        font-size: 50px;
+    }
+    .location {
+        font-size: 24px;
+    }
+    .search-bar img {
+        width: 40px;
+        padding: 10px;
+    }
+    .search-bar input {
+        font-size: 14px;
+        height: 40px;
+    }
+    .weather-data .col {
+        font-size: 16px;
+        gap: 8px;
+    }
 }
